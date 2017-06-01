@@ -65,7 +65,7 @@ function Base.show(io::IO, t::OptimizationState)
     return
 end
 
-OptimizationTrace{T} = Vector{OptimizationState{T}}
+@compat OptimizationTrace{T} = Vector{OptimizationState{T}}
 function Base.show(io::IO, tr::OptimizationTrace)
     @printf io "Iter     Function value   Gradient norm \n"
     @printf io "------   --------------   --------------\n"
