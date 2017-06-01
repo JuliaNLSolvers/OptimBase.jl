@@ -1,4 +1,4 @@
 julia 0.5
 Reexport
 NLSolversBase
-Compat 0.17
+Compat 0.18
