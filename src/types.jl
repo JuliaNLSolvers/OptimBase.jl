@@ -76,7 +76,7 @@ function Base.show(io::IO, tr::OptimizationTrace)
 end
 
 abstract type OptimizationResults end
-type UnivariateOptimizationResults{T,M,O<:Optimizer} <: OptimizationResults
+type UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
     method::O
     initial_lower::T
     initial_upper::T
@@ -87,10 +87,10 @@ type UnivariateOptimizationResults{T,M,O<:Optimizer} <: OptimizationResults
     converged::Bool
     rel_tol::T
     abs_tol::T
-    trace::OptimizationTrace{M}
+    trace::OptimizationTrace{O}
     f_calls::Int
 end
-type MultivariateOptimizationResults{O<:Optimizer,T,N,M} <: OptimizationResults
+type MultivariateOptimizationResults{O<:Optimizer,T,N} <: OptimizationResults
     method::O
     initial_x::Array{T,N}
     minimizer::Array{T,N}
@@ -107,7 +107,7 @@ type MultivariateOptimizationResults{O<:Optimizer,T,N,M} <: OptimizationResults
     g_tol::Float64
     g_residual::Float64
     f_increased::Bool
-    trace::OptimizationTrace{M}
+    trace::OptimizationTrace{O}
     f_calls::Int
     g_calls::Int
     h_calls::Int

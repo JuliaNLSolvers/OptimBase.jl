@@ -1,5 +1,6 @@
 # returns a string for the name of the Optimizer
 Base.summary(o::Optimizer) = error("summary not implemented for $o")
+Base.summary(or::OptimizationResults) = summary(or.method)
 
 minimizer(r::OptimizationResults) = r.minimizer
 minimum(r::OptimizationResults) = r.minimum
