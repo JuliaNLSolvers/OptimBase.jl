@@ -2,7 +2,7 @@ using OptimBase
 using Base.Test
 import Base.summary
 
-struct FakeOptimizer <: Optimizer
+immutable FakeOptimizer <: Optimizer
 end
 
 @testset "summary" begin
