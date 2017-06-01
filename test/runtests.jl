@@ -2,6 +2,12 @@ using OptimBase
 using Base.Test
 import Base.summary
 
+if !isdefined(Base.Test, Symbol("@test_nowarn"))
+    macro test_nowarn(ex)
+        esc(ex)
+    end
+end
+
 immutable FakeOptimizer <: Optimizer
 end
 
