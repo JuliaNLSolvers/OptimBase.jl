@@ -1,4 +1,4 @@
-abstract type Optimizer end
+@compat abstract type Optimizer end
 function print_header(method::Optimizer)
     @printf "Iter     Function value   Gradient norm \n"
 end
@@ -75,7 +75,7 @@ function Base.show(io::IO, tr::OptimizationTrace)
     return
 end
 
-abstract type OptimizationResults end
+@compat abstract type OptimizationResults end
 type UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
     method::O
     initial_lower::T

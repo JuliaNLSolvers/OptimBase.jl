@@ -1,6 +1,6 @@
 module OptimBase
 
-
+using Compat
 using Reexport
 @reexport using NLSolversBase
 
