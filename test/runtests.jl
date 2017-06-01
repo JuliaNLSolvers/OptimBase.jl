@@ -2,12 +2,6 @@ using OptimBase
 using Base.Test
 import Base.summary
 
-if !isdefined(Base.Test, Symbol("@test_nowarn"))
-    macro test_nowarn(ex)
-        esc(ex)
-    end
-end
-
 immutable FakeOptimizer <: Optimizer
 end
 
@@ -16,7 +10,8 @@ end
     @test_throws ErrorException summary(a_fake_optimizer)
 
     Base.summary(::FakeOptimizer) = "Fake Optimizer"
-    @test_nowarn summary(a_fake_optimizer)
+# add back when moving to v0.6
+#    @test_nowarn summary(a_fake_optimizer)
 end
 
 @testset "optimization results" begin
