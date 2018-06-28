@@ -13,6 +13,7 @@ export OptimizationOptions,
        UnivariateOptimizationResults,
        MultivariateOptimizationResults,
        # API
+       iterations,
        minimizer,
        converged
 
