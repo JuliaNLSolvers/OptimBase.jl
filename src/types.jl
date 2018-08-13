@@ -3,7 +3,7 @@ function print_header(method::Optimizer)
     @printf "Iter     Function value   Gradient norm \n"
 end
 
-immutable Options{TCallback <: Union{Void, Function}}
+struct Options{TCallback <: Union{Void, Function}}
     x_tol::Float64
     f_tol::Float64
     g_tol::Float64
@@ -49,7 +49,7 @@ function print_header(options::Options)
     end
 end
 
-immutable OptimizationState{T <: Optimizer}
+struct OptimizationState{T <: Optimizer}
     iteration::Int
     value::Float64
     g_norm::Float64
@@ -76,7 +76,7 @@ function Base.show(io::IO, tr::OptimizationTrace)
 end
 
 @compat abstract type OptimizationResults end
-type UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
+mutable struct UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
     method::O
     initial_lower::T
     initial_upper::T
@@ -90,7 +90,7 @@ type UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
     trace::OptimizationTrace{O}
     f_calls::Int
 end
-type MultivariateOptimizationResults{O<:Optimizer,T,N} <: OptimizationResults
+mutable struct MultivariateOptimizationResults{O<:Optimizer,T,N} <: OptimizationResults
     method::O
     initial_x::Array{T,N}
     minimizer::Array{T,N}
