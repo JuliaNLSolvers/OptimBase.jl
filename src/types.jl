@@ -3,7 +3,7 @@ function print_header(method::Optimizer)
     @printf "Iter     Function value   Gradient norm \n"
 end
 
-struct Options{TCallback <: Union{Void, Function}}
+struct Options{TCallback <: Union{Nothing, Function}}
     x_tol::Float64
     f_tol::Float64
     g_tol::Float64
