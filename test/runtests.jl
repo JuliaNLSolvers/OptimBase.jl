@@ -1,5 +1,5 @@
 using OptimBase
-using Base.Test
+using Test
 import Base.summary
 
 immutable FakeOptimizer <: Optimizer
