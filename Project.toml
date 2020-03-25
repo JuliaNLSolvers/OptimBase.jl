@@ -1,0 +1,16 @@
+name = "OptimBase"
+uuid = "87e2bd06-a317-5318-96d9-3ecbac512eee"
+
+[deps]
+NLSolversBase = "d41bc354-129a-5804-8e4c-c37616107c6c"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+
+[compat]
+julia = "0.7, 1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

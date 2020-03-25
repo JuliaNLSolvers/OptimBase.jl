@@ -1,6 +1,5 @@
 module OptimBase
 
-using Compat
 using Reexport
 using Printf
 @reexport using NLSolversBase

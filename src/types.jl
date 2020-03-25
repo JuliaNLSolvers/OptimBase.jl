@@ -1,4 +1,4 @@
-@compat abstract type Optimizer end
+abstract type Optimizer end
 function print_header(method::Optimizer)
     @printf "Iter     Function value   Gradient norm \n"
 end
@@ -65,7 +65,7 @@ function Base.show(io::IO, t::OptimizationState)
     return
 end
 
-@compat OptimizationTrace{T} = Vector{OptimizationState{T}}
+OptimizationTrace{T} = Vector{OptimizationState{T}}
 function Base.show(io::IO, tr::OptimizationTrace)
     @printf io "Iter     Function value   Gradient norm \n"
     @printf io "------   --------------   --------------\n"
@@ -75,7 +75,7 @@ function Base.show(io::IO, tr::OptimizationTrace)
     return
 end
 
-@compat abstract type OptimizationResults end
+abstract type OptimizationResults end
 mutable struct UnivariateOptimizationResults{T,O<:Optimizer} <: OptimizationResults
     method::O
     initial_lower::T
