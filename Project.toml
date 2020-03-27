@@ -1,5 +1,6 @@
 name = "OptimBase"
 uuid = "87e2bd06-a317-5318-96d9-3ecbac512eee"
+version = "2.1.0"
 
 [deps]
 NLSolversBase = "d41bc354-129a-5804-8e4c-c37616107c6c"
@@ -7,6 +8,7 @@ Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 
 [compat]
+NLSolversBase = "7"
 julia = "0.7, 1"
 
 [extras]
