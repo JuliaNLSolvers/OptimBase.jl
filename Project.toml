@@ -1,6 +1,6 @@
 name = "OptimBase"
 uuid = "87e2bd06-a317-5318-96d9-3ecbac512eee"
-version = "2.0.2"
+version = "2.0.1"
 
 [deps]
 NLSolversBase = "d41bc354-129a-5804-8e4c-c37616107c6c"
