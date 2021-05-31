@@ -1,6 +1,6 @@
 name = "OptimBase"
 uuid = "87e2bd06-a317-5318-96d9-3ecbac512eee"
-version = "2.0.1"
+version = "2.0.2"
 
 [deps]
 NLSolversBase = "d41bc354-129a-5804-8e4c-c37616107c6c"
@@ -9,7 +9,7 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 
 [compat]
 NLSolversBase = "7"
-Reexport = "0.2, ^1.0"
+Reexport = "0.2, 1"
 julia = "0.7, 1"
 
 [extras]
